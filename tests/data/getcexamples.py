@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 from urllib import urlopen as upen
 import re
 
@@ -14,4 +13,3 @@ for i in range(50):
     code = get_code(i+1)
     open('c/more/code%d.c' % (i+1), 'w').write(code)
 
-# vim: et sw=4 sts=4

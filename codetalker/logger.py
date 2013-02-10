@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import sys
 
 DEBUG = False
@@ -23,5 +21,3 @@ class Logger:
         self.lines.append(text)
 
 logger = Logger(DEBUG)
-
-# vim: et sw=4 sts=4

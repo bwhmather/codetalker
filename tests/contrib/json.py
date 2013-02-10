@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 import os
 import glob
@@ -48,4 +47,3 @@ parse_rule(json.list_, (
         '[',
         ))
 
-# vim: et sw=4 sts=4

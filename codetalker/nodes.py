@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 # from tokens import EOF, Token
 from errors import ParseError
@@ -47,4 +46,3 @@ class ParseTree(object):
         text = text.rstrip() + '\n' + '</%s>' % self.name
         return text
 
-# vim: et sw=4 sts=4

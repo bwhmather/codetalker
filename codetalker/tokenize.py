@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from tokens import Token, EOF
 from errors import TokenError
@@ -21,4 +20,3 @@ def tokenize(tokens, text):
                 text.charno, text.text[text.at:text.at+10].encode('string_escape')))
         text.advance(len(one.value))
 
-# vim: et sw=4 sts=4

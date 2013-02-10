@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 class Special:
     '''a special sub-rule for doing more complicated regular expression-like stuff'''
@@ -67,4 +66,3 @@ def commas(item, trailing=True, char=','):
         return res + ([char],)
     return res
 
-# vim: et sw=4 sts=4

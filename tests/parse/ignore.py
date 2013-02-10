@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from codetalker import Grammar
 from codetalker.tokens import INT, WHITE, CharToken, ID
@@ -52,4 +51,3 @@ for i, st in enumerate(strings[1]):
     globals()['test_fail #%d' % i] = mfail(st)
         
 
-# vim: et sw=4 sts=4

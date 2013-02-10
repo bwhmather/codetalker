@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 from tokens import INDENT, DEDENT
 from errors import *
 
@@ -61,4 +60,3 @@ def white(text, at=0):
         i += 1
     return i - at
 
-# vim: et sw=4 sts=4

@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 '''
 Testing for the codetalker.contrib.json grammar
 '''
@@ -34,4 +33,3 @@ for i, (string, py) in enumerate(zip(to_parse, parsed)):
 
 all_tests = suite(__name__)
 
-# vim: et sw=4 sts=4

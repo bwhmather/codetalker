@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from codetalker import Grammar
 from codetalker.tokens import STRING, ID, NUMBER, WHITE, NEWLINE
@@ -25,4 +24,3 @@ if __name__ == '__main__':
             print 'test passed'
     print 'Finished!'
 
-# vim: et sw=4 sts=4

@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import unittest
 import inspect
 
@@ -46,4 +45,3 @@ def modsuite(*mods):
 
 
 
-# vim: et sw=4 sts=4

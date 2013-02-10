@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from codetalker import testing
 import codetalker.contrib.configparser as configparser
@@ -67,4 +66,3 @@ def test_bigold():
         raise Exception('this was supposed to be recursive: %s' % one)
 
 
-# vim: et sw=4 sts=4

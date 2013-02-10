@@ -389,4 +389,3 @@ class Grammar:
         return res
 
 
-# vim: et sw=4 sts=4

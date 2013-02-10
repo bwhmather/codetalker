@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from codetalker.contrib.math import m, grammar
 from codetalker.grammar import TokenError
@@ -23,4 +22,3 @@ def test_5():
 def test_6():
     tk = _ttoken('1 () 3.4+2')
 
-# vim: et sw=4 sts=4

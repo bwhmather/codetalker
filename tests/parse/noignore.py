@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from codetalker import Grammar
 from codetalker.tokens import INT, WHITE, CharToken, ID, STRING, SSTRING
@@ -36,4 +35,3 @@ if __name__ == '__main__':
 
 
 
-# vim: et sw=4 sts=4

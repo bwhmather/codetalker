@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from codetalker import Grammar
 from codetalker.tokens import STRING, ID, NUMBER, WHITE, NEWLINE, IdToken
@@ -31,4 +30,3 @@ def test_3():
     assert len(tks) == 7
     assert isinstance(tks[-1], RESERVED)
 
-# vim: et sw=4 sts=4

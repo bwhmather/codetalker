@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from codetalker import Grammar, Translator
 from codetalker.special import star, plus, _or
@@ -85,4 +84,3 @@ def _value(node):
 
 parse = t.from_string
 
-# vim: et sw=4 sts=4

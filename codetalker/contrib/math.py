@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from codetalker import Grammar, Translator
 from codetalker.tokens import STRING, ID, NUMBER, WHITE, NEWLINE, ReToken, re, CharToken, StringToken
@@ -57,4 +56,3 @@ def number(node):
 
 evaluate = m.from_string
 
-# vim: et sw=4 sts=4

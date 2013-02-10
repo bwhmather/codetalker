@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 class Token(object):
     '''Base token class'''
@@ -35,4 +34,3 @@ class ReToken(Token):
             return len(m.group())
         return 0
 
-# vim: et sw=4 sts=4

@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from magictest import MagicTest as TestCase, suite
 
@@ -107,4 +106,3 @@ for func, strings in tests.iteritems():
 
 all_tests = suite(__name__)
 
-# vim: et sw=4 sts=4

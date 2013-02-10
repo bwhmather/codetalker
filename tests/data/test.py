@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 from codetalker import parser
 from codetalker.bnf import c
 
@@ -34,4 +33,3 @@ if __name__=='__main__':
     import sys,os
     main()
 
-# vim: et sw=4 sts=4

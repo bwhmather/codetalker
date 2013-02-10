@@ -27,4 +27,3 @@ else:
     print 'reading from stdin...'
     parse(sys.stdin.read())
 
-# vim: et sw=4 sts=4

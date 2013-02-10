@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from token import Token, ReToken
 
@@ -25,4 +24,3 @@ __all__ = ['Token', 'ReToken', 'CharToken', 'StringToken', 'IdToken', 'IIdToken'
            'TSTRING', 'SSTRING', 'STRING', 'ID', 'NUMBER', 'INT', 'HEX', 'ANY',
            'CCOMMENT', 'CMCOMMENT', 'PYCOMMENT', 'WHITE', 'NEWLINE', 'INDENT', 'DEDENT', 'EOF']
 
-# vim: et sw=4 sts=4

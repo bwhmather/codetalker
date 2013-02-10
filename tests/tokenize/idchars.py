@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from codetalker import Grammar
 from codetalker.tokens import STRING, ID, NUMBER, WHITE, NEWLINE, IdToken
@@ -27,4 +26,3 @@ def test_3():
     else:
         raise AssertionError('was supposed to fail')
 
-# vim: et sw=4 sts=4

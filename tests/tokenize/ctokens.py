@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from util import just_tokenize, make_tests, make_fails, TSTRING, STRING, SSTRING, ID, WHITE, NUMBER, INT, HEX, CCOMMENT, CMCOMMENT, PYCOMMENT, NEWLINE, ANY
 
@@ -155,4 +154,3 @@ make_single(ANY,
         ('', 0),
         ('ask@#$\n', 7))
 
-# vim: et sw=4 sts=4

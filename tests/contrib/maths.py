@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from __future__ import division
 from codetalker.contrib.math import evaluate
@@ -20,4 +19,3 @@ def make(exp):
 for exp in strings:
     globals()['test_math "%s"' % exp] = make(exp)
 
-# vim: et sw=4 sts=4

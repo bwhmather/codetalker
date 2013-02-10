@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from codetalker import Grammar
 from codetalker.tokens import *
@@ -30,4 +29,3 @@ def test_three():
     assert len(tree) == 4
 
 
-# vim: et sw=4 sts=4

@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from magictest import MagicTest as TestCase, suite
 
@@ -32,4 +31,3 @@ down
 
 all_tests = suite(__name__)
 
-# vim: et sw=4 sts=4

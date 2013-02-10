@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from codetalker import Grammar, Translator
 from codetalker.special import star, plus, _or, commas
@@ -66,4 +65,3 @@ def t_tfn(node):
 
 loads = JSON.from_string
 
-# vim: et sw=4 sts=4

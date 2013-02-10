@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from codetalker import Grammar
 from codetalker.tokens import *
@@ -50,4 +49,3 @@ def make_fails(globs, name, tokenize, tests):
         globs['test %s (fail) #%d' % (name, i)] = make_fail(tokenize, string)
 
 
-# vim: et sw=4 sts=4

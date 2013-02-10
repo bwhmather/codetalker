@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import os
 local = lambda *a: os.path.join(os.path.dirname(__file__), *a)
 text = open(local('grammar.json')).read()
@@ -16,4 +15,3 @@ if not good == timeit(JSON.from_string, text):
 
 
 
-# vim: et sw=4 sts=4

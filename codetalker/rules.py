@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from errors import *
 import tokens
@@ -66,4 +65,3 @@ class Rule(object):
         for arg in args:
             setattr(self, arg, args[arg])
 
-# vim: et sw=4 sts=4

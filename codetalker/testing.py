@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from codetalker.errors import ParseError, TokenError
 
@@ -28,4 +27,3 @@ def parse_rule(name, grammar):
     return meta
 
 
-# vim: et sw=4 sts=4

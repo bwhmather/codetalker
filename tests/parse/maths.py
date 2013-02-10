@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from codetalker.contrib.math import m, grammar, evaluate
 from codetalker.grammar import TokenError
@@ -42,4 +41,3 @@ if __name__ == '__main__':
             print 'test passed'
     print 'Finished!'
 
-# vim: et sw=4 sts=4
