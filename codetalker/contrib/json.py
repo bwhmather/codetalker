@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-from codetalker.pgm import Grammar, Translator
-from codetalker.pgm.special import star, plus, _or, commas
-from codetalker.pgm.tokens import STRING, NUMBER, EOF, NEWLINE, WHITE, ReToken, re, CharToken, StringToken
+from codetalker import Grammar, Translator
+from codetalker.special import star, plus, _or, commas
+from codetalker.tokens import STRING, NUMBER, EOF, NEWLINE, WHITE, ReToken, re, CharToken, StringToken
 
 '''Man this looks sweet. It really should be
 this easy to write a json parser.'''

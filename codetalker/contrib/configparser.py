@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-from codetalker.pgm import Grammar, Translator
-from codetalker.pgm.special import star, plus, _or
-from codetalker.pgm.tokens import *
+from codetalker import Grammar, Translator
+from codetalker.special import star, plus, _or
+from codetalker.tokens import *
 
 def start(rule):
     rule | star(_or(section, NEWLINE))

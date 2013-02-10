@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from codetalker.contrib.math import m, grammar
-from codetalker.pgm.grammar import TokenError
+from codetalker.grammar import TokenError
 
 def _ttoken(text):
     tk = grammar.get_tokens(text)

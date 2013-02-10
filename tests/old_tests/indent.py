@@ -2,12 +2,12 @@
 
 from magictest import MagicTest as TestCase, suite
 
-from codetalker import pgm
-from codetalker.pgm.tokens import STRING, ID, NUMBER, WHITE, CCOMMENT, NEWLINE, EOF, INDENT, DEDENT
-from codetalker.pgm.special import star, plus, _or
-from codetalker.pgm.grammar import ParseError
-from codetalker.pgm.text import IndentText
-from codetalker.pgm.tokenize import tokenize
+from codetalker import Grammar
+from codetalker.tokens import STRING, ID, NUMBER, WHITE, CCOMMENT, NEWLINE, EOF, INDENT, DEDENT
+from codetalker.special import star, plus, _or
+from codetalker.grammar import ParseError
+from codetalker.text import IndentText
+from codetalker.tokenize import tokenize
 
 class IndentTest(TestCase):
     def tokens(self):

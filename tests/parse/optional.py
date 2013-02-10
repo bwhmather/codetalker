@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-from codetalker.pgm import Grammar
-from codetalker.pgm.tokens import *
-from codetalker.pgm.special import *
+from codetalker import Grammar
+from codetalker.tokens import *
+from codetalker.special import *
 
 def start(rule):
     rule | plus(value)

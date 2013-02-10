@@ -3,7 +3,7 @@
 import os
 import sys
 from codetalker.contrib.json import loads
-from codetalker.pgm.errors import ParseError, TokenError
+from codetalker.errors import ParseError, TokenError
 
 def parse(text):
     try:

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from codetalker.contrib.math import m, grammar, evaluate
-from codetalker.pgm.grammar import TokenError
+from codetalker.grammar import TokenError
 
 def _parse(text):
     tree = grammar.process(text)

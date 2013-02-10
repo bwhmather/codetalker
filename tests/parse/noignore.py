@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-from codetalker import pgm
-from codetalker.pgm.tokens import INT, WHITE, CharToken, ID, STRING, SSTRING
-from codetalker.pgm.special import star, plus, _or, no_ignore
-from codetalker.pgm.errors import ParseError
+from codetalker import Grammar
+from codetalker.tokens import INT, WHITE, CharToken, ID, STRING, SSTRING
+from codetalker.special import star, plus, _or, no_ignore
+from codetalker.errors import ParseError
 
 class SYMBOL(CharToken):
     chars = '@'
@@ -11,7 +11,7 @@ class SYMBOL(CharToken):
 def at(rule):
     rule | (no_ignore('@', ID), _or(STRING, SSTRING))
 
-g = pgm.Grammar(start=at, tokens=[SYMBOL, ID, STRING, SSTRING, WHITE], ignore=[WHITE])
+g = Grammar(start=at, tokens=[SYMBOL, ID, STRING, SSTRING, WHITE], ignore=[WHITE])
 
 from codetalker import testing
 

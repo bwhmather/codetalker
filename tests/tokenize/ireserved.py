@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-from codetalker.pgm import Grammar
-from codetalker.pgm.tokens import STRING, ID, NUMBER, WHITE, NEWLINE, IIdToken
-from codetalker.pgm.special import star
+from codetalker import Grammar
+from codetalker.tokens import STRING, ID, NUMBER, WHITE, NEWLINE, IIdToken
+from codetalker.special import star
 
 class RESERVED(IIdToken):
     strings = ['for', 'in', 'and']

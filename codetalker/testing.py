@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from codetalker.pgm.errors import ParseError, TokenError
+from codetalker.errors import ParseError, TokenError
 
 def parse_rule(name, grammar):
     parts = name.split('.')

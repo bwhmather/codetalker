@@ -1,8 +1,8 @@
 # cython: profile=True
 from stdlib cimport malloc, free
 
-from codetalker.pgm.tokens import INDENT, DEDENT, EOF, Token as PyToken, ReToken
-from codetalker.pgm.errors import ParseError, TokenError, AstError
+from codetalker.tokens import INDENT, DEDENT, EOF, Token as PyToken, ReToken
+from codetalker.errors import ParseError, TokenError, AstError
 
 '''Stuff in here:
 

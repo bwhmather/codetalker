@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-from codetalker import pgm
-from codetalker.pgm.tokens import STRING, ID, NUMBER, WHITE, NEWLINE, INDENT, DEDENT, ReToken, re, INT
-from codetalker.pgm.special import star, plus, _or
-from codetalker.pgm.grammar import ParseError
+from codetalker import Grammar
+from codetalker.tokens import STRING, ID, NUMBER, WHITE, NEWLINE, INDENT, DEDENT, ReToken, re, INT
+from codetalker.special import star, plus, _or
+from codetalker.grammar import ParseError
 
 from codetalker.cgrammar import TokenError
 
@@ -13,9 +13,9 @@ def start(rule):
 class SMALL(ReToken):
     rx = re.compile('hello')
 
-grammar = pgm.Grammar(start=start, tokens=[SMALL, WHITE, NEWLINE], indent=True, ignore=[WHITE])
+grammar = Grammar(start=start, tokens=[SMALL, WHITE, NEWLINE], indent=True, ignore=[WHITE])
 
-g2 = pgm.Grammar(start=start, tokens=[INT, WHITE, NEWLINE], indent=True, ignore=[WHITE])
+g2 = Grammar(start=start, tokens=[INT, WHITE, NEWLINE], indent=True, ignore=[WHITE])
 
 def test_indent():
     tokens = grammar.get_tokens('hello\n  hello')

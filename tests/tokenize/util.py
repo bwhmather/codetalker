@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 
-from codetalker import pgm
-from codetalker.pgm.tokens import *
-from codetalker.pgm.errors import *
+from codetalker import Grammar
+from codetalker.tokens import *
+from codetalker.errors import *
 
 def noop(rule):
     rule | EOF
 
 def just_tokenize(*tokens):
-    g = pgm.Grammar(noop, tokens)
+    g = Grammar(noop, tokens)
     def meta(text):
         _tokens = g.get_tokens(text)
         assert ''.join(tok.value for tok in _tokens) == text

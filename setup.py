@@ -52,7 +52,7 @@ setup(
     cmdclass = {'build_ext': build_ext , 'test':test},
     ext_modules = pyx_mods,
     include_dirs = 'codetalker',
-    packages = ['codetalker', 'codetalker.pgm', 'codetalker.contrib'],
+    packages = ['codetalker', 'codetalker.contrib'],
 )
 
 # vim: et sw=4 sts=4

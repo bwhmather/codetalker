@@ -43,7 +43,7 @@ Here's the process:
     Once you get the AST, you want to do something with it, right? Most often
     it's "traverse the tree and do something with each node, depending on it's
     type". Here's where the `Translator
-    <http://github.com/jabapyth/codetalker/blob/master/codetalker/pgm/translator.py>`_
+    <http://github.com/jabapyth/codetalker/blob/master/codetalker/translator.py>`_
     class comes in. It provied a nice easy interface to systematically
     translate an AST into whatever you want. `Here's an example
     <http://github.com/jabapyth/codetalker/blob/master/codetalker/contrib/json.py#L39>`_

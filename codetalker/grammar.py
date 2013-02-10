@@ -6,8 +6,8 @@ from nodes import AstNode, ParseTree, TokenStream
 from logger import logger
 import inspect
 
-# from codetalker.pgm.cgrammar.tokenize import tokenize
-# from codetalker.pgm.cgrammar import main
+# from codetalker.cgrammar.tokenize import tokenize
+# from codetalker.cgrammar import main
 # from text import Text, IndentText
 
 from codetalker.cgrammar import consume_grammar, get_tokens, get_parse_tree, get_ast

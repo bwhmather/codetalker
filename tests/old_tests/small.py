@@ -2,10 +2,10 @@
 
 from magictest import MagicTest as TestCase, suite
 
-from codetalker import pgm
-from codetalker.pgm.tokens import STRING, ID, NUMBER, WHITE, CCOMMENT, NEWLINE, EOF, StringToken
-from codetalker.pgm.special import star, plus, _or
-from codetalker.pgm.grammar import ParseError
+from codetalker import Grammar
+from codetalker.tokens import STRING, ID, NUMBER, WHITE, CCOMMENT, NEWLINE, EOF, StringToken
+from codetalker.special import star, plus, _or
+from codetalker.grammar import ParseError
 
 class SYMBOL(StringToken):
     items = list('[]=-+/{}')
@@ -27,7 +27,7 @@ def four_sub(rule):
 
 
 def make_grammar(start):
-    return pgm.Grammar(start=start, tokens=[STRING, ID, NUMBER, CCOMMENT, SYMBOL, NEWLINE, EOF, WHITE], ignore=[WHITE, CCOMMENT])
+    return Grammar(start=start, tokens=[STRING, ID, NUMBER, CCOMMENT, SYMBOL, NEWLINE, EOF, WHITE], ignore=[WHITE, CCOMMENT])
 
 def parse_test(start):
     grammar = make_grammar(start)

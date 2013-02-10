@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-from codetalker import pgm
-from codetalker.pgm.tokens import STRING, ID, NUMBER, WHITE, NEWLINE, ReToken, re, CharToken, StringToken
-from codetalker.pgm.special import star, plus, _or, binop
-from codetalker.pgm.grammar import ParseError
+from codetalker import Grammar, Translator
+from codetalker.tokens import STRING, ID, NUMBER, WHITE, NEWLINE, ReToken, re, CharToken, StringToken
+from codetalker.special import star, plus, _or, binop
+from codetalker.grammar import ParseError
 
 ## TOKENS
 
@@ -34,9 +34,9 @@ class SYMBOL(CharToken):
 
 expression = binop(list('-+'), list('*/%'), ['**'], value=NUMBER, ops_token=OP, name='BinOp', paren=True)
 
-grammar = pgm.Grammar(start=expression, tokens = [SYMBOL, OP], ignore = [WHITE, NEWLINE], ast_tokens=[NUMBER])
+grammar = Grammar(start=expression, tokens = [SYMBOL, OP], ignore = [WHITE, NEWLINE], ast_tokens=[NUMBER])
 
-m = pgm.Translator(grammar)
+m = Translator(grammar)
 
 ast = grammar.ast_classes
 

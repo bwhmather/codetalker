@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-from codetalker import pgm
-from codetalker.pgm.tokens import INT, WHITE, CharToken, ID
-from codetalker.pgm.special import star, plus, _or
-from codetalker.pgm.errors import ParseError
+from codetalker import Grammar
+from codetalker.tokens import INT, WHITE, CharToken, ID
+from codetalker.special import star, plus, _or
+from codetalker.errors import ParseError
 
 class SYMBOL(CharToken):
     chars = ':-'
@@ -29,7 +29,7 @@ strings = (
     )
 )
 
-g = pgm.Grammar(start=start, tokens=[SYMBOL, ID, INT, WHITE], ignore=[WHITE])
+g = Grammar(start=start, tokens=[SYMBOL, ID, INT, WHITE], ignore=[WHITE])
 
 def mpass(what):
     def meta():
