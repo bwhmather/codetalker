@@ -2,7 +2,7 @@
 # from tokens import EOF, Token
 from errors import ParseError
 
-class TokenStream:
+class TokenStream(object):
     def __init__(self, tokens):
         self.tokens = tuple(tokens)
         self.at = 0
