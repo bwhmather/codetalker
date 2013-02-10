@@ -1,9 +1,7 @@
-
-from errors import *
-import tokens
-from tokens import Token
+from codetalker.errors import RuleError
+from codetalker.tokens import Token
+from codetalker.special import Special
 import types
-from special import Special
 import inspect
 
 class RuleLoader(object):

@@ -1,20 +1,12 @@
-from rules import RuleLoader
-from tokens import EOF, INDENT, DEDENT, Token
-from errors import *
+from codetalker.rules import RuleLoader
+from codetalker.tokens import EOF, INDENT, DEDENT, Token
+from codetalker.errors import *
 
-from nodes import AstNode, ParseTree, TokenStream
-from logger import logger
+from codetalker.nodes import AstNode, ParseTree, TokenStream
+from codetalker.logger import logger
 import inspect
 
-# from codetalker.cgrammar.tokenize import tokenize
-# from codetalker.cgrammar import main
-# from text import Text, IndentText
-
 from codetalker.cgrammar import consume_grammar, get_tokens, get_parse_tree, get_ast
-
-import time
-
-TIME = False
 
 def camelCase(text):
     return text.replace('_', ' ').title().replace(' ', '')

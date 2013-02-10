@@ -1,7 +1,4 @@
-
-from token import Token, ReToken
-
-import re
+from codetalker.token import Token, ReToken
 
 class SpecialToken(Token):
     '''a special token which is automatically provided by the parser'''
@@ -18,6 +15,7 @@ class INDENT(SpecialToken):
 class DEDENT(SpecialToken):
     '''used by the preprocessor to indicate the end of an indented block'''
 
+import re
 from codetalker.cgrammar import TSTRING, SSTRING, STRING, ID, NUMBER, INT, HEX, CCOMMENT, CMCOMMENT, PYCOMMENT, WHITE, NEWLINE, ANY, CharToken, StringToken, IdToken, IIdToken
 
 __all__ = ['Token', 'ReToken', 'CharToken', 'StringToken', 'IdToken', 'IIdToken',

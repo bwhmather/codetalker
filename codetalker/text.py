@@ -1,5 +1,5 @@
-from tokens import INDENT, DEDENT
-from errors import *
+from codetalker.tokens import INDENT, DEDENT
+from codetalker.errors import IndentError
 
 class Text:
     '''a small utility class in charge of serving up
@@ -26,8 +26,6 @@ class Text:
 
     def hasMore(self):
         return self.at < self.ln
-
-import re
 
 class IndentText(Text):
     '''a specialized Text class, which also keeps track

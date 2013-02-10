@@ -1,4 +1,3 @@
-
 class CodeTalkerException(Exception):
     pass
 

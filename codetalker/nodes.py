@@ -1,6 +1,5 @@
-
-# from tokens import EOF, Token
-from errors import ParseError
+from codetalker.tokens import EOF
+from codetalker.errors import ParseError
 
 class TokenStream(object):
     def __init__(self, tokens):

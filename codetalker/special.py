@@ -1,4 +1,3 @@
-
 class Special:
     '''a special sub-rule for doing more complicated regular expression-like stuff'''
     def __init__(self, *items):
@@ -26,8 +25,6 @@ class no_ignore(Special):
     char = 'i'
 class _not(Special):
     char = '!'
-
-import string
 
 def binop(*items, **args):
     '''binop(ops1, ops2, ops3, ..., name='BinOp', paren = False, value = [rule or token]) -> rule

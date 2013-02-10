@@ -1,16 +1,10 @@
-from tokens import Token
-import types
-import inspect
-import copy
-from nodes import AstNode
+from codetalker.tokens import Token
 
-from errors import CodeTalkerException
-
-class UnhandledTokenException(CodeTalkerException):
+class UnhandledTokenException(Exception):
     """ Raised by Translator when no function is registered to handle a token
     """
     def __init__(self, tree):
-        Error.__init__(self,
+        Exception.__init__(self,
                 "no rule to translate %s" % tree.__class__.__name__)
 
 class Translator:
@@ -29,7 +23,7 @@ class Translator:
             return None
 
         if tree.__class__ not in self._register:
-            raise TranslatorException()
+            raise UnhandledTokenException()
 
         if "scope" in kwargs:
             return self._register[tree.__class__](kwargs["scope"], tree,
