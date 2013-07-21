@@ -25,11 +25,7 @@ class Translator:
         if tree.__class__ not in self._register:
             raise UnhandledTokenException()
 
-        if "scope" in kwargs:
-            return self._register[tree.__class__](kwargs["scope"], tree,
-                                                  *args, **kwargs)
-        else:
-            return self._register[tree.__class__](tree, *args, **kwargs)
+        return self._register[tree.__class__](tree, *args, **kwargs)
 
     def from_string(self, text, *args, **kwargs):
         tree = self._grammar.get_ast(text)
