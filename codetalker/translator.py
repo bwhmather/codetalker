@@ -7,7 +7,7 @@ class UnhandledTokenException(Exception):
         Exception.__init__(self,
                 "no rule to translate %s" % tree.__class__.__name__)
 
-class Translator:
+class Translator(object):
     def __init__(self, grammar):
         self._grammar = grammar
         self._register = {Token: lambda tree : tree.value}
