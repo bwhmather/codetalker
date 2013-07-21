@@ -206,50 +206,6 @@ class Grammar:
             return -(child[0]+1)
         return child[0]
 
-    def to_ast(self, tree):
-        raise Exception('not using this one anymore')
-        if isinstance(tree, main.pyToken):
-            return self.tokens[tree.type](tree.value, tree.lineno, tree.charno)
-        rule = tree.rule
-        name = self.rule_names[rule]
-        if self.ast_attrs[rule]:
-            node = getattr(self.ast_classes, name)()
-            node.name = name
-            node._rule = rule
-            node._tree = tree
-            for attr, whiches, single, start, end, optional in self.ast_attrs[rule]:
-                children = [child for child in tree.children if self.which_(child) in whiches]
-                if single and len(children) <= start:
-                    if optional:
-                        setattr(node, attr, None)
-                        continue
-                    raise RuleError('ast attribute not found: %s' % attr)
-                if single:
-                    setattr(node, attr, self.to_ast(children[start]))
-                else:
-                    setattr(node, attr, tuple(self.to_ast(child) for child in children[start:end]))
-            return node
-        else:
-            rload = self.real_rules[rule]
-            if rload.pass_single:
-                for child in tree.children:
-                    if isinstance(child, main.pyToken):
-                        if self.tokens[child.type] in self.ast_tokens:
-                            return self.tokens[child.type](child.value, child.lineno, child.charno)
-                    else:
-                        return self.to_ast(child)
-                raise RuleError('failure -- nothing to ast-tize %s %s' % (rload, tree))
-            else:
-                items = []
-                for child in tree.children:
-                    if isinstance(child, main.pyToken):
-                        child = self.tokens[child.type](child.value, child.lineno, child.charno)
-                        if child.rule in self.ast_tokens:
-                            items.append(child)
-                    else:
-                        items.append(self.to_ast(child))
-                return items
-
     def parse_rule(self, rule, tokens, error):
         if rule < 0 or rule >= len(self.rules):
             raise ParseError('invalid rule: %d' % rule)
